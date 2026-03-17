@@ -1,0 +1,261 @@
+/* Google Fonts (remote import; local font used for special headings) */
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Press+Start+2P&display=swap");
+
+@font-face {
+  font-family: "SuperMario256";
+  src: url("../Fonts/SuperMario256.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+:root {
+  --bg: #0e1a2b;
+  --bg2: #162b44;
+  --text: #f5f7fa;
+  --muted: rgba(245, 247, 250, 0.75);
+  --accent: #f4c542;
+  --accent2: #3bd1ff;
+  --border: rgba(255, 255, 255, 0.18);
+}
+
+/* Global layout + typography */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: 0 1rem;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: radial-gradient(circle at top, var(--bg2), var(--bg) 65%);
+  color: var(--text);
+  font-family: "Iosevka Charon", "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  line-height: 1.5;
+}
+
+/* Headings use a playful "Press Start 2P" Google font */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Press Start 2P", "SuperMario256", monospace;
+  color: var(--accent);
+  letter-spacing: 0.08em;
+  margin: 0 0 0.5rem;
+}
+
+h1 {
+  text-shadow: 0 0 1rem rgba(0, 0, 0, 0.65);
+}
+
+/* Strange-but-useful helper class */
+.banana {
+  display: inline-block;
+  padding: 0.35rem 0.6rem;
+  border-radius: 0.5rem;
+  background: linear-gradient(120deg, rgba(244, 197, 66, 0.85), rgba(59, 209, 255, 0.65));
+  box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.25);
+  transform: perspective(300px) rotateX(2deg) translateZ(0);
+  transition: transform 150ms ease, filter 150ms ease;
+}
+
+.banana:hover,
+.banana:focus-visible {
+  filter: drop-shadow(0 0 0.6rem rgba(244, 197, 66, 0.65));
+  transform: perspective(300px) rotateX(0deg) translateZ(0);
+}
+
+/* Links */
+a {
+  color: var(--accent2);
+  text-decoration: none;
+  transition: color 150ms ease, text-shadow 150ms ease;
+}
+
+a:hover,
+a:focus-visible {
+  color: var(--accent);
+  text-shadow: 0 0 0.35rem rgba(255, 255, 255, 0.55);
+}
+
+/* Navigation list (no bullets + spacing) */
+nav {
+  display: flex;
+  justify-content: center;
+  padding: 0.75rem 0;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0.55rem 0.75rem;
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  background: rgba(0, 0, 0, 0.35);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 0.75rem;
+}
+
+nav ul li:not(:last-child) > a {
+  padding-right: 1.1rem;
+}
+
+/* Navigation button style */
+nav a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem 0.9rem;
+  border-radius: 0.55rem;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  background: rgba(255, 255, 255, 0.08);
+  transition: background 180ms ease, transform 180ms ease, box-shadow 180ms ease;
+}
+
+nav a:hover,
+nav a:focus-visible {
+  color: var(--accent);
+  text-shadow: 0 0 1rem rgba(255, 255, 255, 0.75);
+  background: rgba(255, 255, 255, 0.15);
+  box-shadow: 0 0 0.8rem rgba(244, 197, 66, 0.25);
+  transform: translateY(-1px);
+}
+
+nav a.active {
+  font-weight: bold;
+  color: var(--accent);
+}
+
+/* Section headings with adjacent paragraph styling (pseudo-class use) */
+h2 + p {
+  color: var(--muted);
+  margin-top: 0;
+}
+
+/* Utility classes */
+.zen {
+  font-style: italic;
+  opacity: 0.85;
+}
+
+.pixel {
+  font-family: "SuperMario256", monospace;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+}
+
+/* Layout helpers */
+main {
+  flex: 1;
+  padding: 1.5rem;
+}
+
+section {
+  margin: 2rem auto;
+  padding: 1.75rem 1.5rem;
+  max-width: 900px;
+  background: rgba(10, 19, 29, 0.42);
+  border: 1px solid var(--border);
+  border-radius: 0.85rem;
+}
+
+section h2 {
+  text-align: center;
+}
+
+/* Project blocks */
+.project {
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 0.85rem;
+  padding: 1.25rem 1.35rem;
+  margin: 1.5rem 0;
+  display: grid;
+  grid-template-columns: minmax(130px, 220px) 1fr;
+  gap: 1.1rem;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.25);
+}
+
+.project img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 0.65rem;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+}
+
+.project h1,
+.project h2,
+.project h3 {
+  margin: 0 0 0.35rem;
+  text-align: center;
+}
+
+/* Harmonize lists */
+ul {
+  margin: 1rem 0;
+  padding-left: 1.25rem;
+}
+
+ul li {
+  margin-bottom: 0.35rem;
+  line-height: 1.4;
+}
+
+header,
+footer {
+  padding: 1.25rem 1.5rem;
+  text-align: center;
+}
+
+footer {
+  font-size: 0.85em;
+  color: var(--muted);
+  background: #000;
+}
+
+.small-font {
+  font-size: 1.50rem;
+}
+
+/* Profile picture */
+.profile-pic {
+  border-radius: 50%;
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+  display: block;
+  margin: 1rem auto;
+  border: 2px solid var(--accent);
+}
+
+/* Scrollbar styling */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--accent) var(--bg);
+}
+
+/* WebKit (Chrome, Edge, Safari) */
+*::-webkit-scrollbar {
+  width: 10px;
+}
+
+*::-webkit-scrollbar-track {
+  background: var(--bg);
+  border-radius: 10px;
+}
+
+*::-webkit-scrollbar-thumb {
+  background: rgba(244, 197, 66, 0.85);
+  border-radius: 10px;
+  border: 2px solid rgba(0, 0, 0, 0.3);
+}
+
+*::-webkit-scrollbar-thumb:hover {
+  background: rgba(244, 197, 66, 1);
+}
