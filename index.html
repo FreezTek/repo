@@ -3,15 +3,19 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Accueil - Mon CV/Portfolio</title>
     <link rel="icon" type="image/jpeg" href="Images/images.jpg">
+    <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Iosevka+Charon:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+    <script src="js/theme.js" defer></script>
 </head>
 <body>
     <header>
+        <button type="button" class="theme-toggle" data-theme-toggle aria-pressed="false">Mode clair</button>
         <h1>Bienvenue sur mon site CV/Portfolio</h1>
     </header>
     <nav>
@@ -27,12 +31,20 @@
     <main>
         <section id="presentation">
             <h2>Présentation</h2>
-            <p>Bonjour, je m'appelle <strong>SOULIÉ Lucas</strong>. Passionné par le hardware informatique, je vous invite à découvrir mon parcours, mes centres d'intérêts et mes projets à travers ce site.</p>
+            <p style="text-align: center;">Bonjour, je m'appelle <strong>SOULIÉ Lucas</strong>. Passionné par le hardware informatique, je vous invite à découvrir mon parcours, mes centres d'intérêts et mes projets à travers ce site.</p>
         </section>
-        <img src="Images/images.jpg" alt="Photo de profil" class="profile-pic">
+        <a href="https://fr.wikipedia.org/wiki/Luigi" target="_blank" rel="noopener noreferrer" aria-label="Page Wikipédia de Luigi parceque pourquoi pas" class="profile-link">
+            <img src="Images/images.jpg" alt="Photo de profil" class="profile-pic">
+        </a>
     </main>
     <footer>
-        <p>© 2026 SOULIÉ Lucas | <a href="https://github.com/FreezTek/repo" target="_blank">GitHub</a></p>
+        <div class="footer-content">
+            <p class="footer-left">© 2026 SOULIÉ Lucas</p>
+            <div class="footer-links">
+                <a href="https://fr.wikipedia.org/wiki/Boss" target="_blank" rel="noopener noreferrer" class="footer-icon" aria-label="Wikipedia">🌐</a>
+                <a href="https://www.ipi-ecoles.com/" target="_blank" rel="noopener noreferrer" class="footer-icon" aria-label="Site de mon ecole">🎓</a>
+            </div>
+        </div>
     </footer>
 </body>
 </html>
