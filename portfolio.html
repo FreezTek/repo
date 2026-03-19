@@ -9,9 +9,11 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Iosevka+Charon:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+    <script src="js/theme.js" defer></script>
 </head>
 <body>
     <header>
+        <button type="button" class="theme-toggle" data-theme-toggle aria-pressed="false">Mode clair</button>
         <h1>Portfolio / Centres d'intérêts</h1>
     </header>
     <nav>
@@ -33,7 +35,8 @@
                 <img src="Images/image-montage-ordinateur-fixe-sur-mesure-1.jpg" alt="Matériel informatique" width="150" height="100">
                 <p>Passionné par l'assemblage et la maintenance de ordinateurs.</p>
             </section>
-            <section class="project">
+            <section class="project favorite-project">
+                <span class="favorite-badge">Favori</span>
                 <h2>Jeux Vidéos</h2>
                 <img src="Images/FH-Super-Smash-Bros.-Ultimate-1920x1079.jpeg" alt="Jeux Vidéos" width="150" height="100">
                 <p>Passioné par le jeu vidéo depuis l'enfance je me suis beaucoup intéréssé à son histoire et leurs confections.</p>
@@ -46,7 +49,13 @@
         </section>
     </main>
     <footer>
-        <p>© 2026 SOULIÉ Lucas | <a href="https://github.com/FreezTek/repo" target="_blank">GitHub</a></p>
+        <div class="footer-content">
+            <p class="footer-left">© 2026 SOULIÉ Lucas</p>
+            <div class="footer-links">
+                <a href="https://fr.wikipedia.org/wiki/Boss" target="_blank" rel="noopener noreferrer" class="footer-icon" aria-label="Wikipedia">🌐</a>
+                <a href="https://www.ipi-ecoles.com/" target="_blank" rel="noopener noreferrer" class="footer-icon" aria-label="Site de mon ecole">🎓</a>
+            </div>
+        </div>
     </footer>
 </body>
 </html>

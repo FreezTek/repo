@@ -9,9 +9,11 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Iosevka+Charon:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+    <script src="js/theme.js" defer></script>
 </head>
 <body>
     <header>
+        <button type="button" class="theme-toggle" data-theme-toggle aria-pressed="false">Mode clair</button>
         <h1>Contact</h1>
     </header>
     <nav>
@@ -26,12 +28,51 @@
     </nav>
     <main>
         <section>
-            <h2>Lorem Ipsum</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse potenti.</p>
+            <h2>Me Contacter</h2>
+            <form class="contact-form">
+                <div class="form-group">
+                    <label for="name">Nom *</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email *</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="subject">Sujet *</label>
+                    <select id="subject" name="subject" required>
+                        <option value="">-- Sélectionnez un sujet --</option>
+                        <option value="question">Question générale</option>
+                        <option value="collaboration">Proposition de collaboration</option>
+                        <option value="bug">Signaler un bug</option>
+                        <option value="other">Autre</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="message">Message *</label>
+                    <textarea id="message" name="message" rows="6" required></textarea>
+                </div>
+
+                <div class="form-group checkbox">
+                    <input type="checkbox" id="subscribe" name="subscribe">
+                    <label for="subscribe">M'ajouter à votre liste de diffusion</label>
+                </div>
+
+                <button type="submit" class="btn-submit">Envoyer</button>
+            </form>
         </section>
     </main>
     <footer>
-        <p>© 2026 SOULIÉ Lucas | <a href="https://github.com/FreezTek/repo" target="_blank">GitHub</a></p>
+        <div class="footer-content">
+            <p class="footer-left">© 2026 SOULIÉ Lucas</p>
+            <div class="footer-links">
+                <a href="https://fr.wikipedia.org/wiki/Boss" target="_blank" rel="noopener noreferrer" class="footer-icon" aria-label="Wikipedia">🌐</a>
+                <a href="https://www.ipi-ecoles.com/" target="_blank" rel="noopener noreferrer" class="footer-icon" aria-label="Site de mon ecole">🎓</a>
+            </div>
+        </div>
     </footer>
 </body>
 </html>
