@@ -3,8 +3,10 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Grille de prix - Mon CV/Portfolio</title>
     <link rel="icon" type="image/jpeg" href="Images/images.jpg">
+    <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -28,8 +30,49 @@
     </nav>
     <main>
         <section>
-            <h2>Lorem Ipsum</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla facilisi. Pellentesque euismod, nisi eu consectetur.</p>
+            <h2>Grille tarifaire</h2>
+            <p>Voici mes différents services et tarifs proposés.</p>
+            <div class="table-wrapper" role="region" aria-label="Tarifs" tabindex="0">
+                <table class="pricing-table">
+                    <thead>
+                        <tr>
+                            <th>Service</th>
+                            <th>Description</th>
+                            <th>Tarif</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Audit Web</strong></td>
+                            <td>Analyse complète de votre site web et recommandations</td>
+                            <td class="price">500 €</td>
+                        </tr>
+                            <td><strong>Développement Front-end</strong></td>
+                            <td>Création et intégration d'interfaces web modernes</td>
+                            <td class="price">2,500 € - 4,500 €</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Maintenance Mensuelle</strong></td>
+                            <td>Support technique et mises à jour régulières</td>
+                            <td class="price">300 €/mois</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Optimisation SEO</strong></td>
+                            <td>Amélioration du référencement naturel</td>
+                            <td class="price">800 € - 1,200 €</td>
+                        </tr>
+                            <td><strong>Design et UX</strong></td>
+                            <td>Conception d'interfaces et expérience utilisateur</td>
+                            <td class="price">1,500 € - 3,000 €</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Conseil en stratégie numérique</strong></td>
+                            <td>Consultation et aide à la transformation digitale</td>
+                            <td class="price">150 €/heure</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
         </section>
     </main>
     <footer>
